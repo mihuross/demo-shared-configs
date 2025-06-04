@@ -1,0 +1,15 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionPolicy
+metadata:
+  name: demo-xxx
+spec:
+  priority: 1
+  selector:
+    product:
+      names:
+        - demo-product
+    targetEnvironment:
+      types:
+        - PROD
+  policy:
+    action: commit
