@@ -11,9 +11,9 @@ spec:
       dependsOn:
         - develop
       policy:
-        action: pr
+        action: commit
     - environment: prod-eu2
       dependsOn:
         - prod-eu
       policy:
-        action: pr
+        action: commit
