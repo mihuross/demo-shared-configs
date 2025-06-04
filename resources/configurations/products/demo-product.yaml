@@ -1,0 +1,13 @@
+apiVersion: codefresh.io/v1beta2
+kind: Product
+metadata:
+  name: demo-product
+spec:
+  promotionFlows:
+    - name: one-by-one
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: NotIn
+          values:
+            - block
+  concurrency: queue
